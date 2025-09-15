@@ -45,30 +45,30 @@
 
 ### Extract .mvgl
 1. Chọn tab ".mvgl Files"
-2. Nhấn "Extract File .mvgl"
+2. Chú ý phần "Extract File .mvgl"
 3. Chọn file .mvgl nguồn
 4. Chọn thư mục đích
 5. Nhấn "Extract"
 
 ### Repack .mvgl
 1. Chọn tab ".mvgl Files"
-2. Nhấn "Repack thành File .mvgl"
-3. Chọn thư mục chứa CSV files
+2. Chú ý phần "Repack thành File .mvgl"
+3. Chọn thư mục chứa Data files
 4. Chọn vị trí lưu file .mvgl
 5. Nhấn "Repack"
 
 ### Extract .mbe
 1. Chọn tab ".mbe Files"
-2. Nhấn "Extract File .mbe"
-3. Chọn file .mbe hoặc thư mục chứa nhiều file .mbe
+2. Chú ý phần "Extract File .mbe"
+3. Chọn file .mbe hoặc nhiều file .mbe
 4. Chọn thư mục đích
 5. Nhấn "Extract"
 
 ### Repack .mbe
 1. Chọn tab ".mbe Files"
-2. Nhấn "Repack thành File .mbe"
+2. Chú ý phần "Repack thành File .mbe"
 3. Chọn thư mục chứa CSV files
-4. Chọn vị trí lưu file .mbe
+4. Chọn thư mục lưu file .mbe
 5. Nhấn "Repack"
 
 ## 🔧 Công nghệ sử dụng
