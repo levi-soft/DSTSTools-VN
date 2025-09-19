@@ -107,7 +107,6 @@ DSTSTool GUI v2/
 |-----------|---------------|--------|----------------|
 | **CPK Archive** | `.cpk` | Định dạng archive game | YACpkTool |
 | **MVGL Archive** | `.mvgl` | Archive model/texture | DSCSTools |
-| **DSCS Archive** | `.dscs` | Định dạng archive thay thế | DSCSTools |
 
 ### Định dạng Hình ảnh
 | Định dạng | Phần mở rộng | Mô tả | Nén |
