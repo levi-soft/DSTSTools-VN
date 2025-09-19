@@ -101,26 +101,18 @@ class MainWindow(QMainWindow):
         help_menu.addAction(about_action)
 
     def open_readme_en(self):
-        """Open English README file"""
-        readme_path = os.path.join(get_application_path(), 'README.md')
-        if os.path.exists(readme_path):
-            try:
-                webbrowser.open(f'file://{readme_path}')
-            except Exception as e:
-                QMessageBox.warning(self, "Error", f"Could not open README.md: {str(e)}")
-        else:
-            QMessageBox.warning(self, "File Not Found", "README.md file not found in application directory")
+        """Open English README on GitHub"""
+        try:
+            webbrowser.open('https://github.com/levi-soft/DSTSTools-VN/blob/main/README.md')
+        except Exception as e:
+            QMessageBox.warning(self, "Error", f"Could not open GitHub README: {str(e)}")
 
     def open_readme_vi(self):
-        """Open Vietnamese README file"""
-        readme_path = os.path.join(get_application_path(), 'README_VI.md')
-        if os.path.exists(readme_path):
-            try:
-                webbrowser.open(f'file://{readme_path}')
-            except Exception as e:
-                QMessageBox.warning(self, "Lỗi", f"Không thể mở README_VI.md: {str(e)}")
-        else:
-            QMessageBox.warning(self, "Không tìm thấy file", "File README_VI.md không tìm thấy trong thư mục ứng dụng")
+        """Open Vietnamese README on GitHub"""
+        try:
+            webbrowser.open('https://github.com/levi-soft/DSTSTools-VN/blob/main/README_VI.md')
+        except Exception as e:
+            QMessageBox.warning(self, "Lỗi", f"Không thể mở GitHub README: {str(e)}")
 
     def show_about(self):
         """Show about dialog"""
