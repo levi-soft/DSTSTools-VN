@@ -83,14 +83,9 @@ class MainWindow(QMainWindow):
         help_menu = menubar.addMenu('Help')
 
         # README English
-        readme_en_action = QAction('📖 README (English)', self)
+        readme_en_action = QAction('📖 README.md', self)
         readme_en_action.triggered.connect(self.open_readme_en)
         help_menu.addAction(readme_en_action)
-
-        # README Vietnamese
-        readme_vi_action = QAction('📖 README (Tiếng Việt)', self)
-        readme_vi_action.triggered.connect(self.open_readme_vi)
-        help_menu.addAction(readme_vi_action)
 
         # Separator
         help_menu.addSeparator()
@@ -103,7 +98,7 @@ class MainWindow(QMainWindow):
     def open_readme_en(self):
         """Open English README on GitHub"""
         try:
-            webbrowser.open('https://github.com/levi-soft/DSTSTools-VN/blob/main/README.md')
+            webbrowser.open('https://github.com/levi-soft/DSTSTools-VN')
         except Exception as e:
             QMessageBox.warning(self, "Error", f"Could not open GitHub README: {str(e)}")
 
