@@ -1,10 +1,10 @@
-# DSTSTool GUI v2.0 Release Notes
+# DSTSTools v2.0 Release Notes - Digimon Story: Time Stranger Modding Tools
 
-## 🎉 Official Release of DSTSTool GUI v2.0
+## 🎉 Official Release of DSTSTools v2.0
 
 *Release Date: September 19, 2025*
 
-We proudly present **DSTSTool GUI v2.0** - the completely new version of the premier modding tool for Digimon Story: Time Stranger!
+We proudly present **DSTSTools v2.0** - the completely new version of the premier modding tool for Digimon Story: Time Stranger, featuring powerful tools for .cpk, .mvgl, .img, and .mbe file processing!
 
 ---
 

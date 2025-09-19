@@ -1,20 +1,20 @@
-# DSTSTool GUI v2
+# DSTSTools - Digimon Story: Time Stranger Modding Tools
 
 [![Version](https://img.shields.io/badge/version-2.0-blue.svg)](https://github.com/levi-soft/DSTSTools-VN)
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows)
 
-**DSTSTool GUI v2** is a comprehensive graphical user interface (GUI) application built with Python and PyQt6, specialized for Digimon Story: Time Stranger game modding. The application provides powerful tools for processing and converting popular game file formats, supporting batch processing with real-time progress monitoring and intelligent error handling.
+**DSTSTools** is a comprehensive graphical user interface (GUI) application built with Python and PyQt6, specialized for Digimon Story: Time Stranger game modding. This tool provides powerful utilities for processing and converting game file formats including .cpk, .mvgl, .img, and .mbe files, supporting batch processing with real-time progress monitoring and intelligent error handling.
 
 
 ## 🎯 Purpose and Benefits
 
-DSTSTool GUI v2 is specially designed to:
-- **Simplify modding process**: Intuitive interface helps users easily manipulate game files
+DSTSTools is specially designed for Digimon Story: Time Stranger modding to:
+- **Simplify modding process**: Intuitive interface helps users easily manipulate .cpk, .mvgl, .img, and .mbe game files
 - **Increase efficiency**: Batch processing and multi-threading save significant time
 - **Ensure safety**: Automatic backup and file integrity checking
-- **Support community**: Open-source tool serving the modding community
+- **Support community**: Open-source tool serving the Digimon Story: Time Stranger modding community
 
 ## 📋 Table of Contents
 
@@ -74,25 +74,25 @@ DSTSTool GUI v2 is specially designed to:
 
 ## 📁 Supported File Formats
 
-### Archive Formats
+### Archive Formats (Digimon Story: Time Stranger)
 | Format | Extension | Description | Tool Used |
 |--------|-----------|-------------|-----------|
-| **CPK Archive** | `.cpk` | Game archive format | YACpkTool |
-| **MVGL Archive** | `.mvgl` | Model/texture archive | DSCSTools |
+| **CPK Archive** | `.cpk` | Digimon Story: Time Stranger game archive format | YACpkTool |
+| **MVGL Archive** | `.mvgl` | Digimon Story: Time Stranger model/texture archive | DSCSTools |
 
-### Image Formats
+### Image Formats (Texture Tools)
 | Format | Extension | Description | Compression |
 |--------|-----------|-------------|-------------|
-| **IMG Texture** | `.img` | Game texture format | BC7 (via DDS) |
-| **PNG Image** | `.png` | Standard image format | Lossless |
-| **DDS Texture** | `.dds` | DirectDraw Surface | BC7/BC1/BC3 |
+| **IMG Texture** | `.img` | Digimon Story: Time Stranger game texture format | BC7 (via DDS) |
+| **PNG Image** | `.png` | Standard image format for texture conversion | Lossless |
+| **DDS Texture** | `.dds` | DirectDraw Surface for advanced compression | BC7/BC1/BC3 |
 
-### Data Formats
+### Data Formats (Modding Tools)
 | Format | Extension | Description | Tool Used |
 |--------|-----------|-------------|-----------|
-| **MBE Data** | `.mbe` | Game data format | THL-MBE-Parser |
-| **CSV Data** | `.csv` | Comma-separated values | Built-in |
-| **TSV Data** | `.tsv` | Tab-separated values | Built-in |
+| **MBE Data** | `.mbe` | Digimon Story: Time Stranger game data format | THL-MBE-Parser |
+| **CSV Data** | `.csv` | Comma-separated values for data editing | Built-in |
+| **TSV Data** | `.tsv` | Tab-separated values for text processing | Built-in |
 
 ### Batch Processing Support
 - ✅ **Directory scanning**: Automatically find files in directories
@@ -406,15 +406,51 @@ DSTSTool GUI is distributed under the MIT License. See the `LICENSE` file for mo
 
 ---
 
-## 📦 Downloads
+## 🔍 Keywords & Tags
+
+### Primary Keywords
+- DSTSTools
+- Digimon Story: Time Stranger
+- Digimon Story: Time Stranger mod
+- Digimon Story: Time Stranger tool
+
+### Tool Keywords
+- Tool .mvgl
+- Tool .cpk
+- Tool .mbe
+- Tool .img
+
+### Category Tags
+- game modding
+- Python GUI
+- file converter
+- archive extractor
+- modding tools
+- game development
+- file processing
+
+### GitHub Topics (Recommended)
+digimon, modding, tools, game-modding, python-gui, digimon-story-time-stranger, file-converter, archive-tools, game-tools
+
+---
+
+## 🚀 Quick Start for Digimon Story: Time Stranger Modders
 
 **Latest Release**: [v2.0](https://github.com/levi-soft/DSTSTools-VN/releases/latest)
 
-**Quick Start**:
+**Installation & Run**:
 ```bash
 pip install PyQt6
 python DSTSToolGUIV2.py
 ```
+
+**Common Modding Workflows**:
+- Extract .cpk files → Modify contents → Repack .cpk
+- Convert .img textures to .png → Edit in image software → Convert back to .img
+- Parse .mbe data to .csv → Edit values → Repack to .mbe
+- Process .mvgl archives for 3D model/texture modding
+
+## 📦 Downloads
 
 ## 📞 Support
 
