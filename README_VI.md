@@ -9,7 +9,7 @@
 
 ## 🌐 Language Support / Hỗ trợ Ngôn ngữ
 
-📖 **For English users** / **Dành cho người dùng tiếng Anh**: [Click here to read in English / Nhấn vào đây để đọc bằng tiếng Anh](README.md)
+📖 **For English users** / **Dành cho người dùng tiếng Anh**: [Click here to read in English](README.md)
 
 Tài liệu này có sẵn bằng cả tiếng Việt và tiếng Anh. Chọn ngôn ngữ bạn muốn ở trên.
 

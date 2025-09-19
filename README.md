@@ -9,7 +9,7 @@
 
 ## 🌐 Language Support / Hỗ trợ Ngôn ngữ
 
-📖 **For Vietnamese users** / **Dành cho người dùng Việt Nam**: [Click here to read in Vietnamese / Nhấn vào đây để đọc bằng tiếng Việt](README_VI.md)
+📖 **For Vietnamese users** / **Dành cho người dùng Việt Nam**: [Nhấn vào đây để đọc bằng tiếng Việt](README_VI.md)
 
 This documentation is available in both English and Vietnamese. Choose your preferred language above.
 
