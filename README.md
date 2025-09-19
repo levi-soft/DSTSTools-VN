@@ -455,7 +455,7 @@ python DSTSToolGUIV2.py
 ## 📞 Support
 
 - **Issues**: [GitHub Issues](https://github.com/levi-soft/DSTSTools-VN/issues)
-- **README**: [English](README.md) | [Tiếng Việt](README_VI.md)
+- **README**: [English](README.md)
 
 ---
 
