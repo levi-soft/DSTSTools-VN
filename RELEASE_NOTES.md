@@ -217,7 +217,7 @@ Some antivirus may flag third-party executables:
 
 ### Immediate Help
 - **GitHub Issues**: [Report bugs](https://github.com/levi-soft/DSTSTools-VN/issues)
-- **Documentation**: [Full guide](https://levi-soft.github.io/DSTSTools-VN/)
+- **Documentation**: [Full guide](https://github.com/levi-soft/DSTSTools-VN/)
 
 ### Feedback
 We greatly appreciate your feedback:

@@ -7,11 +7,6 @@
 
 **DSTSTool GUI v2** is a comprehensive graphical user interface (GUI) application built with Python and PyQt6, specialized for Digimon Story: Time Stranger game modding. The application provides powerful tools for processing and converting popular game file formats, supporting batch processing with real-time progress monitoring and intelligent error handling.
 
-## 🌐 Language Support / Hỗ trợ Ngôn ngữ
-
-📖 **For Vietnamese users** / **Dành cho người dùng Việt Nam**: [Nhấn vào đây để đọc bằng tiếng Việt](README_VI.md)
-
-This documentation is available in both English and Vietnamese. Choose your preferred language above.
 
 ## 🎯 Purpose and Benefits
 
@@ -68,37 +63,14 @@ DSTSTool GUI v2 is specially designed to:
 - **Line Break Escaping**: Handle line break characters
 - **Batch Directory Processing**: Batch directory processing
 
-## 🏗️ Architecture & Workflow
+## 🏗️ Architecture
 
-### Application Architecture
-```
-DSTSTool GUI v2/
-├── DSTSToolGUIV2.py          # Main application & GUI framework
-├── CPKTool.py               # CPK archive processing module
-├── MVGLTool.py              # MVGL/DSCS file processing module
-├── IMGTool.py               # Image conversion module
-├── MBETool.py               # MBE data processing module
-├── TEXTTool.py              # Text/CSV processing module
-├── Tools/                   # External tools directory
-│   ├── compressonator/      # GPU texture compression
-│   ├── DSCSTools/          # MVGL/DSCS processing
-│   ├── THL-MBE-Parser/     # MBE file parser
-│   └── YACpkTool/          # CPK archive tool
-└── icon.ico                 # Application icon
-```
-
-### Processing Workflow
-1. **User Interface**: PyQt6-based GUI with tab system
-2. **Multi-threading**: Worker threads for heavy tasks
-3. **Tool Integration**: Call third-party executables via subprocess
-4. **Progress Monitoring**: Real-time progress tracking and error handling
-5. **File Management**: Automatic backup and validation
-
-### Safety Mechanisms
-- **Process isolation**: Each task runs in separate thread
-- **Resource cleanup**: Automatic process cleanup on exit
-- **Error recovery**: Graceful error handling with detailed messages
-- **File validation**: Integrity checking before/after processing
+**DSTSTool GUI v2** uses a modular architecture:
+- **Main GUI**: PyQt6-based interface with 5 specialized tool tabs
+- **Processing Modules**: Separate Python modules for each file format
+- **External Tools**: Integrated third-party executables for heavy processing
+- **Multi-threading**: Background processing with progress monitoring
+- **Error Handling**: Comprehensive error recovery and user feedback
 
 ## 📁 Supported File Formats
 
@@ -281,43 +253,31 @@ Tools/
 - **Compressonator CLI**: `compressonatorcli.exe`
 - **DSCS Tools**: `DSCSToolsCLI.exe`
 - **MBE Parser**: `MBE_Parser.py`, `MBE_Repacker.py`
-- **YACpk Tool**: `YACpkTool.exe`, `CpkMaker.dll`
+- **YACpk Tool**: `YACpkTool.exe`
 
 ## 🔗 Sources & Acknowledgments
 
 DSTSTool GUI v2 is built on the foundation of excellent open-source tools from the community. We extend our deepest gratitude to all developers who have contributed to these projects.
 
-### 🖼️ Compressonator (GPU Texture Compression)
-- **Tác giả**: GPUOpen Tools Team (AMD)
+### 🖼️ Compressonator (Texture Compression)
+- **Author**: GPUOpen-Tools
 - **Repository**: https://github.com/GPUOpen-Tools/compressonator
-- **Sử dụng trong**: IMG Tools - Chuyển đổi texture với nén BC7
-- **Giấy phép**: MIT License
-- **Đóng góp**: Công cụ nén texture chuyên nghiệp với hỗ trợ GPU acceleration
-- **Phiên bản**: v4.3.0 (tích hợp trong DSTSTool)
+- **Usage**: IMG Tools - Texture conversion with BC7 compression
 
 ### 📊 THL-MBE-Parser (Data Parser)
-- **Tác giả**: Ahtheerr
+- **Author**: Ahtheerr
 - **Repository**: https://github.com/Ahtheerr/THL-MBE-Parser
-- **Sử dụng trong**: MBE Tools - Parse và repack file MBE
-- **Giấy phép**: MIT License
-- **Đóng góp**: Parser chuyên biệt cho định dạng MBE của game Digimon
-- **Phiên bản**: Latest (tích hợp Python scripts)
+- **Usage**: MBE Tools - Parse and repack MBE files
 
 ### 🎮 DSCSTools (Archive Processor)
-- **Tác giả**: SydMontague
+- **Author**: SydMontague
 - **Repository**: https://github.com/SydMontague/DSCSTools
-- **Sử dụng trong**: MVGL Tools - Xử lý file MVGL/DSCS
-- **Giấy phép**: MIT License
-- **Đóng góp**: Bộ công cụ toàn diện cho xử lý archive game
-- **Phiên bản**: CLI v1.0 (tích hợp executable)
+- **Usage**: MVGL Tools - MVGL/DSCS file processing
 
 ### 📦 YACpkTool (Archive Tool)
-- **Tác giả**: Brolijah
+- **Author**: Brolijah
 - **Repository**: https://github.com/Brolijah/YACpkTool
-- **Sử dụng trong**: CPK Tools - Extract và repack file CPK
-- **Giấy phép**: MIT License
-- **Đóng góp**: Công cụ xử lý archive CPK hiệu quả và đáng tin cậy
-- **Phiên bản**: v1.0 (tích hợp với CpkMaker.dll)
+- **Usage**: CPK Tools - CPK archive extraction/repacking
 
 ### 🙏 Special Thanks
 
@@ -346,75 +306,19 @@ DSTSTool GUI v2 is an open-source project and we encourage:
 
 ## 💻 System Requirements
 
-### Minimum Requirements
-| Component | Requirement | Notes |
-|-----------|-------------|-------|
-| **Operating System** | Windows 10 (64-bit) | Windows 11 recommended |
-| **Python** | 3.8.0+ | 3.9+ recommended for better performance |
-| **RAM** | 4GB | 8GB+ for large files |
-| **Storage** | 500MB | SSD recommended |
-| **Display** | 1280x720 | 1920x1080+ for better experience |
-| **CPU** | Dual-core 2.5GHz+ | Quad-core recommended |
+### Minimum
+- **OS**: Windows 10/11 (64-bit)
+- **Python**: 3.8+
+- **RAM**: 4GB (8GB recommended)
+- **Storage**: 500MB
+- **Display**: 1280x720 minimum
 
-### Recommended Requirements (for optimal performance)
-| Component | Recommendation | Benefits |
-|-----------|----------------|----------|
-| **Operating System** | Windows 11 Pro | Best compatibility |
-| **Python** | 3.11.x | High performance, latest support |
-| **RAM** | 16GB+ | Smooth large file processing |
-| **Storage** | NVMe SSD 1TB+ | High I/O speed |
-| **GPU** | DirectX 11+ | Texture compression support |
-| **Display** | 2560x1440+ | Sharp interface |
-
-### System Compatibility Check
-
-#### Python Check
-```bash
-# Check Python version
-python --version
-
-# Check pip
-pip --version
-
-# Check PyQt6 compatibility
-python -c "import sys; print(f'Python: {sys.version}')"
-```
-
-#### Windows Features Check
-- ✅ .NET Framework 4.8+
-- ✅ Visual C++ Redistributables
-- ✅ DirectX 11+ (for GPU acceleration)
-
-### Advanced Configuration
-
-#### For large files (>2GB)
-```json
-{
-  "max_file_size": "4GB",
-  "buffer_size": "256MB",
-  "thread_count": 4,
-  "temp_dir": "D:\\Temp"
-}
-```
-
-#### For batch processing
-- **Memory allocation**: Maximum 75% of available RAM
-- **Thread pool**: Auto-adjust based on CPU cores
-- **I/O optimization**: Use async operations
-
-### Known Issues and Solutions
-
-#### Windows Defender
-- **Issue**: May block third-party executables
-- **Solution**: Add Tools folder to exclusion list
-
-#### Virtual Machine
-- **Support**: VMware, VirtualBox, Hyper-V
-- **Note**: Need to enable GPU acceleration for texture compression
-
-#### Remote Desktop
-- **Support**: RDP, TeamViewer, AnyDesk
-- **Note**: May be slower when processing large files
+### Recommended
+- **OS**: Windows 11
+- **Python**: 3.11+
+- **RAM**: 16GB+
+- **Storage**: SSD/NVMe
+- **GPU**: DirectX 11+ (for texture compression)
 
 ## ⚠️ Important Notes
 
@@ -426,279 +330,75 @@ python -c "import sys; print(f'Python: {sys.version}')"
 
 ## 🔧 Troubleshooting
 
-### Common Issues and Solutions
+### Common Issues
 
-#### 1. "Python not found" or "pip not found" Error
-```
-Error: 'python' is not recognized as an internal or external command
-```
-**Solution:**
-- Check PATH: `echo %PATH%`
-- Add Python to PATH in Windows settings
-- Use `py` instead of `python`: `py --version`
-
-#### 2. PyQt6 Import Error
-```
-ModuleNotFoundError: No module named 'PyQt6'
-```
-**Solution:**
+#### Python/PyQt6 Issues
 ```bash
 # Install PyQt6
 pip install PyQt6
 
-# Or with admin rights
-pip install --user PyQt6
-
-# Verify installation
-python -c "import PyQt6; print('PyQt6 installed successfully')"
+# Check Python version
+python --version
 ```
 
-#### 3. "Tool not found" Error (Compressonator, DSCSTools, etc.)
-```
-Error: compressonatorcli.exe not found at path/to/Tools/compressonator/
-```
-**Solution:**
-- Check if Tools directory is complete
-- Ensure executables are not blocked by antivirus
-- Add Tools folder to Windows Defender exclusion
-- Check file access permissions
+#### Tool Not Found
+- Ensure Tools directory is complete
+- Add Tools folder to antivirus exclusion
+- Check file permissions
 
-#### 4. Application won't start
-```
-Application crashed on startup
-```
-**Solution:**
-- Check log files in application directory
-- Run from command line: `python DSTSToolGUIV2.py`
-- Check Python and PyQt6 version compatibility
-- Try running with virtual environment
+#### Large File Processing
+- Increase RAM (16GB+ recommended)
+- Process in smaller batches
+- Use SSD storage
 
-#### 5. Large file processing error
-```
-Out of memory error or Processing timeout
-```
-**Solution:**
-- Increase system RAM (16GB+ recommended)
-- Process files in smaller batches
-- Close other applications to free RAM
-- Use SSD instead of HDD
+### FAQ
 
-### FAQ (Frequently Asked Questions)
+**Q: Is DSTSTool GUI free?**
+A: Yes, completely free and open-source under MIT license.
 
-#### Q: Is DSTSTool GUI free?
-**A:** Yes, completely free and open-source under MIT license.
+**Q: Can I use DSTSTool for other games?**
+A: Designed specifically for Digimon Story: Time Stranger.
 
-#### Q: Can I use DSTSTool for other games?
-**A:** The application is designed specifically for Digimon Story: Time Stranger, but some tools may work with other games that have similar formats.
+**Q: How to recover overwritten files?**
+A: Always backup original files before processing.
 
-#### Q: How to recover overwritten files?
-**A:** Always backup original files before processing. If no backup exists, original files may not be recoverable.
+**Q: Why is processing slow?**
+A: Check RAM, storage type, and antivirus settings.
 
-#### Q: Why is file processing very slow?
-**A:** Possible reasons:
-- File too large for available RAM
-- Slow storage (HDD instead of SSD)
-- Antivirus scanning files
-- System resource shortage
-
-#### Q: Can I process multiple files at once?
-**A:** Yes, the application supports batch processing. However, too many files at once may overload the system.
-
-#### Q: How to contribute code?
-**A:** See the Contributing section below for detailed process.
-
-#### Q: Does the application support Linux/Mac?
-**A:** Currently only supports Windows. Third-party tools are primarily Windows-based.
-
-#### Q: Are processed files different from originals?
-**A:** Some formats (like IMG with BC7 compression) will have equivalent quality but smaller size. Other formats maintain original quality.
-
-### Debug Mode
-
-To run the application in debug mode:
-```bash
-# Run with debug logging
-python DSTSToolGUIV2.py --debug
-
-# Or set environment variable
-set DSTSTOOL_DEBUG=1
-python DSTSToolGUIV2.py
-```
-
-### Contact Support
-
-If you encounter unresolved issues:
-1. Check [Issues](https://github.com/your-repo/DSTSTool-GUI/issues) on GitHub
-2. Create a new issue with detailed information:
-   - Application version
-   - Operating system and Python version
-   - Error description and steps to reproduce
-   - Log files if available
+### Support
+- [GitHub Issues](https://github.com/levi-soft/DSTSTools-VN/issues)
+- Include: version, OS, Python version, error details
 
 ## 🤝 Contributing
 
-We greatly welcome all contributions from the community! DSTSTool GUI is an open-source project and we believe that collaboration will make this tool increasingly perfect.
+We welcome contributions! This is an open-source project.
 
 ### How to Contribute
+1. Fork the repository on GitHub
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a Pull Request
 
-#### 1. Code Development
+### Development Setup
 ```bash
-# Fork repository on GitHub
-# Clone your repository
-git clone https://github.com/your-username/DSTSTool-GUI.git
+git clone https://github.com/levi-soft/DSTSTools-VN.git
 cd DSTSTool-GUI
-
-# Create branch for new feature
-git checkout -b feature/your-feature-name
-
-# Install development dependencies
-pip install -r requirements-dev.txt
-
-# Run tests
-python -m pytest
-
-# Format code
-black *.py
-flake8 *.py
-
-# Commit changes
-git commit -m "feat: Add your feature description"
-
-# Push to your branch
-git push origin feature/your-feature-name
-```
-
-#### 2. Pull Request Process
-1. **Fork** repository on GitHub
-2. **Create feature branch** with descriptive name (`feature/add-new-tool`, `fix/bug-fix`, `docs/update-readme`)
-3. **Implement** feature or fix bug
-4. **Test** thoroughly on your environment
-5. **Update documentation** if needed
-6. **Commit** with clear message (following conventional commits)
-7. **Push** to your branch
-8. **Create Pull Request** with detailed description
-
-#### 3. Coding Standards
-```python
-# Sử dụng type hints
-def process_file(file_path: str) -> bool:
-    pass
-
-# Comment functions in English
-def extract_archive(source: str, target: str) -> bool:
-    """
-    Extract archive file to target directory.
-
-    Args:
-        source: Path to archive file
-        target: Target directory for extraction
-
-    Returns:
-        True if successful, False otherwise
-    """
-    pass
-
-# Error handling
-try:
-    # Your code here
-    pass
-except Exception as e:
-    logger.error(f"Error processing file: {e}")
-    return False
-```
-
-#### 4. Welcome Contribution Types
-- ✅ **Bug fixes**: Fix bugs and improve stability
-- ✅ **New features**: Add tools or new features
-- ✅ **Documentation**: Improve docs, tutorials, examples
-- ✅ **Performance**: Optimize processing speed
-- ✅ **UI/UX**: Improve user interface
-- ✅ **Testing**: Add unit tests and integration tests
-- ✅ **Localization**: Support additional languages
-
-#### 5. Issue Reporting
-When reporting bugs or suggesting features:
-- Use available issue templates
-- Provide detailed information:
-  - Application version
-  - Operating system and Python version
-  - Steps to reproduce
-  - Expected vs actual behavior
-  - Screenshots if possible
-
-#### 6. Development Setup
-```bash
-# Clone repository
-git clone https://github.com/your-repo/DSTSTool-GUI.git
-cd DSTSTool-GUI
-
-# Setup virtual environment
-python -m venv venv
-venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-pip install -r requirements-dev.txt
-
-# Run application
+pip install PyQt6
 python DSTSToolGUIV2.py
 ```
 
-### Community Rules
-- **Respect**: Respect others' opinions
-- **Quality**: Ensure high code quality
-- **Testing**: Test thoroughly before submit
-- **Documentation**: Update docs for all changes
-- **Communication**: Discuss before implementing major features
-
-### Contact
-- **GitHub Issues**: For bug reports and feature requests
-- **GitHub Discussions**: For questions and discussions
-- **Discord**: [DSTSTool Community](https://discord.gg/dststool) (optional)
-
-Thank you for contributing to DSTSTool GUI! 🎉
+### Report Issues
+- Use [GitHub Issues](https://github.com/levi-soft/DSTSTools-VN/issues)
+- Include: version, OS, Python version, error details
 
 ## 📝 Changelog
 
 ### [v2.0] - 2025-09-19
-#### ✨ New Features
-- **Completely new interface**: Redesign UI with PyQt6, modern tab system
-- **Multi-format support**: CPK, MVGL, IMG, MBE, TEXT tools integration
-- **Batch processing**: Batch processing with progress tracking
-- **Error handling**: Smart error handling with detailed messages
-- **Process management**: Safe process management, automatic cleanup
-
-### Version Tracking
-```bash
-# Check current version
-python DSTSToolGUIV2.py --version
-
-# Update from GitHub releases
-# Download latest release from GitHub
-```
-
-### Release Notes Template
-```
-## [vX.Y.Z] - YYYY-MM-DD
-
-### Added
-- New feature description
-
-### Changed
-- Changes in existing functionality
-
-### Deprecated
-- Soon-to-be removed features
-
-### Removed
-- Removed features
-
-### Fixed
-- Bug fixes
-
-### Security
-- Security-related changes
-```
+- Complete UI redesign with PyQt6
+- 5 integrated tools: CPK, MVGL, IMG, MBE, TEXT
+- Batch processing with progress tracking
+- Enhanced error handling and process management
 
 ## 📄 License
 
@@ -706,61 +406,21 @@ DSTSTool GUI is distributed under the MIT License. See the `LICENSE` file for mo
 
 ---
 
-## 📦 Downloads & Releases
+## 📦 Downloads
 
-### Latest Release: v2.0
-[![Download](https://img.shields.io/badge/Download-v2.0-blue.svg)](https://github.com/levi-soft/DSTSTools-VN/releases/latest)
-[![All Releases](https://img.shields.io/badge/All%20Releases-View-green.svg)](https://github.com/levi-soft/DSTSTools-VN/releases)
+**Latest Release**: [v2.0](https://github.com/levi-soft/DSTSTools-VN/releases/latest)
 
-### System Requirements Summary
-- **OS**: Windows 10/11 (64-bit)
-- **Python**: 3.8+
-- **RAM**: 4GB minimum
-- **Storage**: 500MB
-
-### Quick Start
+**Quick Start**:
 ```bash
-# 1. Install Python 3.8+
-# 2. Install PyQt6
 pip install PyQt6
-
-# 3. Download DSTSTool GUI
-# 4. Run application
 python DSTSToolGUIV2.py
 ```
 
-## 🌟 Features Overview
+## 📞 Support
 
-| Tool | Input | Output | Features |
-|------|-------|--------|----------|
-| **CPK** | `.cpk` | Files | Extract/Repack, Batch processing |
-| **MVGL** | `.mvgl` | Files | Extract/Repack, DSCS support |
-| **IMG** | `.img` | `.png` | BC7 compression, DDS handling |
-| **MBE** | `.mbe` | `.csv` | Parse/Repack, Metadata |
-| **TEXT** | `.csv` | `.tsv` | Merge/Split, Line breaks |
-
-## 📞 Support & Community
-
-- **GitHub Repository**: [View on GitHub](https://github.com/levi-soft/DSTSTools-VN)
-- **GitHub Issues**: [Report bugs & request features](https://github.com/levi-soft/DSTSTools-VN/issues)
-- **GitHub Discussions**: [Q&A and general discussion](https://github.com/levi-soft/DSTSTools-VN/discussions)
-- **Documentation**: [Full documentation](https://levi-soft.github.io/DSTSTools-VN/)
+- **Issues**: [GitHub Issues](https://github.com/levi-soft/DSTSTools-VN/issues)
 - **README**: [English](README.md) | [Tiếng Việt](README_VI.md)
-
-## 🙏 Acknowledgments
-
-DSTSTool GUI v2 is developed by **Levi** with support from the Digimon Story: Time Stranger modding community.
-
-**Special thanks:**
-- Modding community for inspiration
-- Open-source tool developers
-- Users who contributed valuable feedback
 
 ---
 
-**Author**: Levi
-**Version**: v2.0
-**Last Updated**: 2025-09-19
-**Repository**: [GitHub](https://github.com/levi-soft/DSTSTools-VN)
-
-*DSTSTool GUI is developed to support the game modding community, helping process game files easily and efficiently. Open-source under MIT license.*
+**Author**: Levi | **Version**: v2.0 | **License**: MIT
