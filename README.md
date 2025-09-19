@@ -1,127 +1,203 @@
-# DSTSTool GUI
+# DSTSTool GUI v2
 
-[![Version](https://img.shields.io/badge/version-1.0-blue.svg)](https://github.com)
-[![Python](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+DSTSTool GUI is a graphical user interface (GUI) application built with Python and PyQt6, providing tools for processing and converting popular game file formats. The application supports batch processing with progress monitoring and error handling.
 
-Ứng dụng GUI hiện đại và mạnh mẽ để xử lý file .mvgl và .mbe với giao diện thân thiện và dễ sử dụng.
+## 📋 Table of Contents
 
-## ✨ Tính năng chính
+- [Key Features](#-key-features)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Internal Tools](#-internal-tools)
+- [Sources](#-sources)
+- [System Requirements](#-system-requirements)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-### 📁 File .mvgl
-- **Extract**: Chuyển đổi file .mvgl thành cấu trúc thư mục chứa data files
-- **Repack**: Tạo lại file .mvgl từ thư mục chứa data files
+## 🚀 Key Features
 
-### 📊 File .mbe
-- **Extract**: Chuyển đổi file .mbe thành các file CSV có cấu trúc
-- **Repack**: Tạo lại file .mbe từ nhiều file CSV
-- **Batch Processing**: Xử lý nhiều file cùng lúc
-- **Error Recovery**: Bỏ qua file lỗi và tiếp tục xử lý
+### 1. **CPK Tools** 📦
+- **Extract Files**: Extract CPK files into individual files
+- **Repack Files**: Pack individual files into CPK format
+- **Batch Processing**: Process multiple files simultaneously
+- **Progress Monitoring**: Real-time progress tracking
 
-### 🔧 Text Tools
-- **Merge CSV → TSV**: Gộp nhiều file CSV thành 1 file TSV chuẩn
-  - Tự động tạo metadata column (relative_path)
-  - Giữ nguyên tên cột gốc từ CSV
-  - Xử lý đúng xuống dòng và ký tự đặc biệt
-- **Split TSV → CSV**: Tách file TSV thành cấu trúc thư mục CSV gốc
-  - Khôi phục cấu trúc thư mục đầy đủ
-  - Xử lý file trùng tên trong thư mục khác nhau
+### 2. **MVGL Tools** 🎮
+- **Extract MVGL**: Extract MVGL files into individual files
+- **Repack MVGL**: Pack files into MVGL format
+- **DSCS Support**: DSCS format support
+- **Real-time Progress**: Detailed progress monitoring
 
-## 🚀 Cài đặt và sử dụng
+### 3. **IMG Tools** 🖼️
+- **IMG to PNG**: Convert IMG files to PNG (Batch)
+- **PNG to IMG**: Convert PNG to IMG with BC7 compression
+- **Compressonator Integration**: Uses Compressonator CLI
+- **DDS Management**: Automatic DDS file management
 
-### Yêu cầu hệ thống
-- **OS**: Windows 10+
-- **Python**: 3.7 hoặc cao hơn
-- **RAM**: 512MB+
-- **Disk**: 100MB dung lượng trống
+### 4. **MBE Tools** 📊
+- **Extract MBE to CSV**: Convert MBE to CSV (Batch)
+- **Repack CSV to MBE**: Pack CSV into MBE (Batch)
+- **File Count Display**: Shows number of processed files
+- **Metadata Handling**: Automatic metadata processing
 
-## 📖 Hướng dẫn sử dụng
+### 5. **TEXT Tools** 📝
+- **Merge CSV to TSV**: Merge multiple CSV files into TSV
+- **Split TSV to CSV**: Split TSV into multiple CSV files
+- **Line Break Escaping**: Handle line break characters
+- **Batch Directory Processing**: Batch directory processing
 
-### Giao diện chính
-Ứng dụng có 3 tab chính:
-- **.mvgl Files**: Xử lý file .mvgl
-- **.mbe Files**: Xử lý file .mbe
-- **Text Tools**: Công cụ xử lý text
+## 📦 Installation
 
-### Extract .mvgl
-1. Chọn tab ".mvgl Files"
-2. Chú ý phần "Extract File .mvgl"
-3. Chọn file .mvgl nguồn
-4. Chọn thư mục đích
-5. Nhấn "Extract"
+### Requirements
+- Python 3.8+
+- PyQt6
+- Internal tools (included)
 
-### Repack .mvgl
-1. Chọn tab ".mvgl Files"
-2. Chú ý phần "Repack thành File .mvgl"
-3. Chọn thư mục chứa Data files
-4. Chọn vị trí lưu file .mvgl
-5. Nhấn "Repack"
+### Install Dependencies
+```bash
+pip install PyQt6
+```
 
-### Extract .mbe
-1. Chọn tab ".mbe Files"
-2. Chú ý phần "Extract File .mbe"
-3. Chọn file .mbe hoặc nhiều file .mbe
-4. Chọn thư mục đích
-5. Nhấn "Extract"
+### Run Application
+```bash
+python DSTSToolGUIV2.py
+```
 
-### Repack .mbe
-1. Chọn tab ".mbe Files"
-2. Chú ý phần "Repack thành File .mbe"
-3. Chọn thư mục chứa CSV files
-4. Chọn thư mục lưu file .mbe
-5. Nhấn "Repack"
+## 📖 Usage
 
-## 🔧 Công nghệ sử dụng
+### CPK Tools
+1. **Extract Files**:
+   - Select CPK file using "📄 Browse" button
+   - Select destination directory using "📂 Browse" button
+   - Click "🚀 Extract Files"
+   - Monitor progress bar
 
-- **Python 3.7+**: Ngôn ngữ lập trình chính
-- **PyQt6**: Framework GUI hiện đại
-- **PyInstaller**: Công cụ đóng gói executable
-- **Struct**: Xử lý dữ liệu nhị phân
-- **CSV**: Xử lý file CSV/TSV
+2. **Repack Files**:
+   - Select directory containing files using "📂 Browse" button
+   - Select output CPK file path using "💾 Browse" button
+   - Click "🔧 Repack Files"
+   - Monitor progress bar
 
-## 📋 Thông số kỹ thuật
+### MVGL Tools
+1. **Extract**:
+   - Select source MVGL file
+   - Select destination directory
+   - Click "🚀 Extract Files"
 
-### File .mbe Format
-- **Magic Number**: 'EXPA'
-- **Column Types**: Int, IntID, byte, float, String, StringID
-- **Alignment**: 8-byte cho String/StringID, 4-byte cho các loại khác
-- **Padding**: 0xCC bytes giữa các rows
+2. **Repack**:
+   - Select directory containing files
+   - Select output MVGL file path
+   - Click "🔧 Repack Files"
 
-### File .mvgl Format
-- Hỗ trợ extract thành data files
-- Hỗ trợ repack từ data files
+### IMG Tools
+1. **IMG to PNG**:
+   - Select directory containing IMG files
+   - Select destination directory for PNG files
+   - Click "🔄 Convert to PNG"
 
-## 📝 License
+2. **PNG to IMG**:
+   - Select directory containing PNG files
+   - Select destination directory for IMG files
+   - Click "🔄 Convert to IMG"
 
-Dự án này được phân phối dưới giấy phép MIT. Xem file [`LICENSE`](LICENSE) để biết thêm chi tiết.
+### MBE Tools
+1. **Extract MBE to CSV**:
+   - Select directory containing .MBE files
+   - Select destination directory for CSV files
+   - Click "🚀 Extract Files"
 
-### Điều khoản chính của MIT License:
-- ✅ **Sử dụng miễn phí** cho mục đích cá nhân và thương mại
-- ✅ **Chỉnh sửa** và phân phối lại code
-- ✅ **Bao gồm thông báo bản quyền** trong tất cả bản sao
-- ⚠️ **Không có bảo đảm** về chất lượng hoặc tính năng
-- ⚠️ **Không chịu trách nhiệm** về thiệt hại hoặc vấn đề phát sinh
+2. **Repack CSV to MBE**:
+   - Select directory containing CSV subdirectories
+   - Select destination directory for MBE files
+   - Click "🔧 Repack Files"
 
-## 👨‍💻 Tác giả
+### TEXT Tools
+1. **Merge CSV to TSV**:
+   - Select directory containing CSV subdirectories
+   - Select output TSV file path
+   - Click "🔗 Merge CSV to TSV"
 
-**Levi** - *Developer & Maintainer*
+2. **Split TSV to CSV**:
+   - Select source TSV file
+   - Select destination directory for CSV files
+   - Click "✂️ Split TSV to CSV"
 
-- Email: nguyenthaitrunghieu@gmail.com
-- GitHub: [@levi-soft](https://github.com/levi-soft)
+## 🔧 Internal Tools
 
-## 🙏 Lời cảm ơn
+DSTSTool GUI uses the following external tools:
 
-- Cảm ơn cộng đồng open source
-- Cảm ơn người dùng đã sử dụng và góp ý
+### Tools Directory Structure
+```
+Tools/
+├── compressonator/          # IMG Tools
+├── DSCSTools/              # MVGL Tools
+├── THL-MBE-Parser/         # MBE Tools
+└── YACpkTool/              # CPK Tools
+```
 
-## 📞 Liên hệ
+### File Dependencies
+- **Compressonator CLI**: `compressonatorcli.exe`
+- **DSCS Tools**: `DSCSToolsCLI.exe`
+- **MBE Parser**: `MBE_Parser.py`, `MBE_Repacker.py`
+- **YACpk Tool**: `YACpkTool.exe`, `CpkMaker.dll`
 
-Nếu bạn có câu hỏi hoặc cần hỗ trợ:
+## 🔗 Sources
 
-- Tạo Issue trên GitHub
-- Gửi email đến tác giả
-- Tham gia cộng đồng Discord/Slack (nếu có)
+DSTSTool GUI uses the following open-source tools:
+
+### 1. Compressonator
+- **Source**: https://github.com/GPUOpen-Tools/compressonator
+- **Usage**: IMG Tools - Texture conversion with BC7 compression
+- **License**: MIT License
+
+### 2. THL-MBE-Parser
+- **Source**: https://github.com/Ahtheerr/THL-MBE-Parser
+- **Usage**: MBE Tools - Parse and repack MBE files
+- **License**: MIT License
+
+### 3. DSCSTools
+- **Source**: https://github.com/SydMontague/DSCSTools
+- **Usage**: MVGL Tools - MVGL/DSCS file processing
+- **License**: MIT License
+
+### 4. YACpkTool
+- **Source**: https://github.com/Brolijah/YACpkTool
+- **Usage**: CPK Tools - CPK archive extraction/repacking
+- **License**: MIT License
+
+## 💻 System Requirements
+
+- **OS**: Windows 10/11
+- **Python**: 3.8 or higher
+- **RAM**: 4GB minimum, 8GB recommended
+- **Storage**: 500MB for application and tools
+- **Display**: 1280x720 minimum resolution
+
+## ⚠️ Important Notes
+
+1. **Backup Files**: Always backup original files before processing
+2. **File Permissions**: Ensure read/write permissions for destination directories
+3. **Large Files**: Some files may take considerable time to process
+4. **Error Handling**: Application will display errors if issues occur
+5. **Progress Monitoring**: Monitor progress bar for processing status
+
+## 🤝 Contributing
+
+We welcome all contributions! Please:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📄 License
+
+DSTSTool GUI is distributed under the MIT License. See the `LICENSE` file for more details.
 
 ---
 
-**⭐ Nếu bạn thấy dự án hữu ích, hãy cho chúng tôi một ngôi sao!**
+**Created by**: Levi
+**Version**: v2.0
+**Last Updated**: 2025-01-19
+
+*This application is developed to support the game modding community and handle game files in an easy and efficient way.*
